@@ -1,7 +1,16 @@
-function isPalindrome(str){
-    /* Seu código aqui */
+function isPalindrome(str) {
+    
+  str = str.replace(/\s/g, "").toLowerCase();
+
+  const reversed = str.split("").reverse().join("");
+
+  return str === reversed;
 }
 
-function arrayMaxMin(arr){
-    /* Seu código aqui */
+console.log(isPalindrome("Radar"));
+console.log(isPalindrome("A sacada da casa"));
+console.log(isPalindrome("Teste de palíndromo"));
+
+function arrayMaxMin(arr) {
+  /* Seu código aqui */
 }
