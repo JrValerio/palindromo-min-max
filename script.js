@@ -1,14 +1,14 @@
 function isPalindrome(str) {
   str = str.replace(/\s/g, "").toLowerCase();
 
-  const reversed = str.split("").reverse().join("");
+  for (let start = 0, end = str.length - 1; start < end; start++, end--) {
+    if (str[start] !== str[end]) {
+      return false;
+    }
+  }
 
-  return str === reversed;
+  return true;
 }
-
-console.log(isPalindrome("Radar"));
-console.log(isPalindrome("A sacada da casa"));
-console.log(isPalindrome("Teste de palíndromo"));
 
 function arrayMaxMin(arr) {
   if (arr.length === 0) {
@@ -29,7 +29,3 @@ function arrayMaxMin(arr) {
 
   return [min, max];
 }
-
-console.log(arrayMaxMin([1, 5, 3, 9, 2]));
-console.log(arrayMaxMin([]));
-console.log(arrayMaxMin([42]));
